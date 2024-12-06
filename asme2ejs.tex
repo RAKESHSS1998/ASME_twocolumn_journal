@@ -120,7 +120,7 @@ Towed sonar arrays house a series of pressure sensors inside a fluid-filled elas
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section*{Introduction}
+\section{Introduction}
 
 Towed sonar arrays contain a series of pressure sensors enclosed within a fluid-filled elastic tube. As the sonar array is towed through the water, a thick layer of turbulent flow is generated over the exterior surface of the tube.~The pressure fluctuations in this turbulent boundary layer (TBL), along with other ambient sea pressure variations, excite the elastic tube and subsequently produce acoustic pressure disturbances within the interior fluid. The hydrophones placed in the interior fluid picks these acoustic signals. The signals associated with the turbulent pressure fluctuations are called flow noise. Currently, the flow noise is measured either by towing the sonar array in open water using a dinghy or by allowing the hydrophone to free fall in water \cite{Sarath2010}. In the first case, noise from the boat and vibrations of the towline connections pollute the measured acoustic signals \cite{Unni2011}; whereas in the second case, the useful measurements can be made only at the terminal velocity of the hydrophone. This work aims at developing a fully-coupled vibroacoustic model for predicting the flow noise in towed sonar arrays which is useful over wide range of towing speeds and tube diameters.
 
@@ -148,7 +148,7 @@ One of the objective of this study is to predict the flow noise resulting from t
 \subsection{Chase model}\label{Chase model}
 Chase~\cite{Chase1981} proposed a semi-empirical model for predicting the frequency-wavenumber spectrum of turbulent pressure field over a solid cylinder and is given by
 \begin{equation}\label{Turbulent pressure spectrum equation Chase}
-        \Hat{p}_{0}(k_{z},\omega) = C\rho^{2}\nu_{*}^{3}R^2\biggl[(k_{z}R)^{2}+\frac{1}{12}\biggr]\times \biggl[\frac{(\omega R-u_{c}k_{z}R)^{2}}{h^{2}\nu_{*}^{2}}+(k_{z}R)^{2}+b_1^{-2}\biggr]^{-2.5}.
+        \Hat{p}_{0}(k_{z},\omega) = C\rho^{2}\nu_{*}^{3}R^2\biggl[(k_{z}R)^{2}+\frac{1}{12}\biggr]\biggl[\frac{(\omega R-u_{c}k_{z}R)^{2}}{h^{2}\nu_{*}^{2}}+(k_{z}R)^{2}+b_1^{-2}\biggr]^{-2.5}.
 \end{equation}
 The important parameters in the above equation are axial wavenumber $k_{z}$, frequency $\omega$, density of the fluid $\rho$, convective speed $u_{c}$ ($=0.68u$, where $u$ is the tow speed), $C=0.063$, $h=3.7$, $\nu_{*}=0.04U$ and tube radius $R$~\cite{Chase1981, carpenter1983, knight1996, KUTTANCHANDRIKA2014, Huang2020}.
 %% Use \subsection commands to start a subsection.
