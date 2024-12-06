@@ -60,6 +60,8 @@
 %  
 %% The default is oneside, onecolumn, 10pt, final
 
+\usepackage{lineno}   % For line numbering
+\usepackage{xcolor}
 
 \title{Flow noise estimation models for axial flow past towed sonar arrays}
 
@@ -115,6 +117,8 @@ Towed sonar arrays house a series of pressure sensors inside a fluid-filled elas
 %The primary text heading is  boldface and flushed left with the left margin.  %The spacing between the  text and the heading is two line spaces.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\linenumbers
+\renewcommand{\linenumberfont}{\normalfont\bfseries\color{red}}
 \section*{Introduction}
 
 Towed sonar arrays contain a series of pressure sensors enclosed within a fluid-filled elastic tube. As the sonar array is towed through the water, a thick layer of turbulent flow is generated over the exterior surface of the tube.~The pressure fluctuations in this turbulent boundary layer (TBL), along with other ambient sea pressure variations, excite the elastic tube and subsequently produce acoustic pressure disturbances within the interior fluid. The hydrophones placed in the interior fluid picks these acoustic signals. The signals associated with the turbulent pressure fluctuations are called flow noise. Currently, the flow noise is measured either by towing the sonar array in open water using a dinghy or by allowing the hydrophone to free fall in water \cite{Sarath2010}. In the first case, noise from the boat and vibrations of the towline connections pollute the measured acoustic signals \cite{Unni2011}; whereas in the second case, the useful measurements can be made only at the terminal velocity of the hydrophone. This work aims at developing a fully-coupled vibroacoustic model for predicting the flow noise in towed sonar arrays which is useful over wide range of towing speeds and tube diameters.
@@ -134,8 +138,6 @@ Unnikrishnan \textit{et al}.~\cite{Unni2011} performed experiments to measure th
 Both Carpenter and Kewley~\cite{carpenter1983} and Knight~\cite{knight1996} estimated the flow noise inside a fluid-filled elastic tube with the help of the Chase model for the turbulent pressure spectrum and an approximate tube transfer function. Jineesh and Ebenezer~\cite{jineesh2013} developed a better axisymmetric model of the fluid-filled elastic tube and used it to estimate the flow noise inside the tube. It was found that the earlier approximate transfer function model overestimated the flow noise inside the tube.
 
 This paper develops a new semi-empirical model of the turbulent pressure spectrum for axial flow past a solid cylinder. It also presents a fully coupled three-dimensional vibroacoustic model of a fluid-filled elastic tube. Furthermore, these two models are used to compute the on-axis sound pressure level resulting from an external turbulent pressure excitation on the elastic tube. This paper is organized as follows: Section~\ref{sec:empmodels} discusses two existing semi-empirical models for estimating turbulent pressure spectrum for axial flow past a solid cylinder. Section~\ref{sec:hybmodel} discusses the development of a new semi-empirical model for the turbulent pressure spectrum, which provides improved predictions compared to existing models. Section~\ref{sec:vamodel} discusses the development of a three-dimensional vibroacoustic model for estimating the on-axis flow noise inside a fluid-filled elastic tube. Further, Section~\ref{sec:results} presents the results on interior acoustic pressure spectrum and on-axis flow noise inside a fluid-filled elastic tube and are compared with the available results in the literature.
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Review of semi-empirical models of turbulent pressure spectrum} \label{sec:empmodels}
 
@@ -149,7 +151,6 @@ Chase~\cite{Chase1981} proposed a semi-empirical model for predicting the freque
 \end{equation}
 The important parameters in the above equation are axial wavenumber $k_{z}$, frequency $\omega$, density of the fluid $\rho$, convective speed $u_{c}$ ($=0.68u$, where $u$ is the tow speed), $C=0.063$, $h=3.7$, $\nu_{*}=0.04U$ and tube radius $R$~\cite{Chase1981, carpenter1983, knight1996, KUTTANCHANDRIKA2014, Huang2020}.
 %% Use \subsection commands to start a subsection.
-
 \subsection{Frendi model}
 \label{Frendi model}
 Frendi's model for the turbulent pressure spectrum for a flat plate is given by \cite{frendi2020}
@@ -213,8 +214,7 @@ where $p_{ref} = 1\times10^{-6}$~Pa is the reference acoustic pressure in water.
 
 %% captions go below figures
 \begin{figure}
-    \centering
-    \includegraphics[width=3.4in]{Chase,frendi_vs_Unni_comparison.eps}
+    \centerline{\includegraphics[width=4.5in]{Chase,frendi_vs_Unni_comparison.eps}}
     \caption{Comparison of flow noise predicted by Chase~\cite{Chase1981} and Frendi~\cite{frendi2020} models with the experimental results~\cite{Unni2011} at different tow speeds.}
     \label{Chase,frendi,expt}
 \end{figure}
@@ -257,8 +257,7 @@ The hybrid model is used to compute the flow noise for axial flow past a solid c
 The flow noise can be computed using Eq.~(\ref{Flow noise equaton from Unni}). Here, the turbulent pressure spectrum $\Hat{p}_0(k_z,\omega)$ for the new hybrid model is given by Eq.~(\ref{hybrid model turbulent pressure}) and the hydrophone response function $H(k_z)$ is given by Eq.~(\ref{Hydrophone response equation from Unni}).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
-    \centering
-    \includegraphics[width=3.4in]{Hybrid_model_Chase_frendi_vs_Unni_comparison.eps}
+    \centerline{\includegraphics[width=4.5in]{Hybrid_model_Chase_frendi_vs_Unni_comparison.eps}}
     \caption{A comparison of flow noise predicted by the hybrid model, the Chase model~\cite{Chase1981} and Frendi model~\cite{frendi2020} with that measured from experiments~\cite{Unni2011} at different tow speeds.}
 \label{fig:Flow_noise_of_Hybrid_model_with_chase_frendi_and_Unnikrishnan}
 \end{figure}
@@ -269,8 +268,8 @@ A comparison of flow noise measured in SPL (see Eq.~(\ref{SPL outside noise})) c
 A comparison of the turbulent pressure spectrum $\Hat{p}_0(k_z,\omega)$ predicted by the hybrid model (Eqs.~(\ref{hybrid model equation})-(\ref{hybrid model turbulent pressure})), the Chase model~(Eq.~(\ref{Turbulent pressure spectrum equation Chase})) and the Frendi model~(Eq.~(\ref{One D equation Frendi})) for different frequencies at 2 knots is shown in Fig.~\ref{pressure comparison of hybrid model with chase and Frendi}. Here, the diameter of the cylinder is chosen as 10~mm, density of the fluid is 1000~kg/m$^3$ and the SPL is calculated at 11~m from the leading edge of the solid cylinder. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
-    \centering
-    \includegraphics[width=3.4in]{Chase_hybrid_Frendi_outside_pressure_Spectrum.eps}
+    \centerline{
+    \includegraphics[width=4.3in]{Chase_hybrid_Frendi_outside_pressure_Spectrum.eps}}
     \caption{A comparison of the turbulent pressure spectrum $\Hat{p}_0(k_z,\omega)$ given by the hybrid model~(Eq.~(\ref{hybrid model turbulent pressure})), Chase~(Eq.~(\ref{Turbulent pressure spectrum equation Chase})) and Frendi~(Eq.~(\ref{One D equation Frendi})) model at 2~knots.}
     \label{pressure comparison of hybrid model with chase and Frendi}
 \end{figure}
@@ -290,8 +289,8 @@ It can be seen that, the non-dimensional power spectral density for different to
 While developing a new model of turbulent pressure field for axial flow past a solid cylinder, it is assumed that the cylinder is rigid and therefore the pressure field is not altered by the cylinder displacement field. However, the cylindrical tube in towed sonar arrays is not rigid and can be assumed to be elastic. The turbulent pressure fluctuation outside the elastic tube, creates vibration inside the tube and in turn generates acoustic waves in the fluid inside the tube. The following section presents a three-dimensional vibroacoustic model of a fluid-filled elastic tube, which is further used with the new hybrid model of the external turbulent pressure excitation to estimate on-axis flow noise.
 
 \begin{figure}
-    \centering
-    \includegraphics[width=3.4in]{Non_dimensional_plot_of_hybrid_model.eps}
+    \centerline{
+    \includegraphics[width=4.3in]{Non_dimensional_plot_of_hybrid_model.eps}}
     \caption{Non-dimensional power spectral density for different tow speeds using the new hybrid model.}
     \label{non dimensional plot of hybrid model}
 \end{figure}
@@ -302,8 +301,8 @@ While developing a new model of turbulent pressure field for axial flow past a s
 This section develops a fully-coupled three-dimensional vibroacoustic (3D-VA) model of the fluid-filled elastic tube. A schematic of the fluid-filled tube is shown in Fig.~\ref{fig:fluid filled elastic tube}. First, the displacement field of the elastic tube is derived from the Navier-Lame equilibrium equation (see Section~\ref{governing equation for 3d cylinder}) and then the acoustic pressure field inside the tube is derived from the acoustic wave equation (see Section~\ref{inside fluid modelling}). The structure (elastic tube) and the fluid (interior fluid) are then coupled with the help of stress and displacement boundary conditions at the interface (see Section~\ref{BCS}). External pressure excitation is also taken into account in the form of a stress boundary condition on the outer surface of the tube. The boundary conditions, when expressed in terms of the unknown displacement and pressure fields, form a system of linear algebraic equations. The unknown displacement and pressure fields are then calculated by solving this system of equations (see Section~\ref{solution methods}).
 
 \begin{figure}
-    \centering
-    \includegraphics[width=3.4in]{Sonar_array_element.eps}
+    \centerline{
+    \includegraphics[width=4.3in]{Sonar_array_element.eps}}
      \caption{Fluid filled elastic tube.}
     \label{fig:fluid filled elastic tube}
 \end{figure}
@@ -367,13 +366,11 @@ The axial displacement field is
     - \beta_2[J_{0}(r\beta_2) + J_{1}(r\beta_2)\cos(\theta)]G_1 - \beta_2[Y_{0}(r\beta_2) + Y_{1}(r\beta_2)\cos(\theta)]G_2\bigg\}.
 \end{multline}
 The spatio-temporal ($r, \theta, z, t$) displacement field is then transformed to the wavenumber-frequency ($r, \theta, k_z, \omega$) domain using the Fourier transform pairs,
-\begin{equation}\label{Forward fourier transform}
-    \Hat{G}(r,\theta,k_{z},\omega) = \frac{1}{4\pi^{2}}\int^{\infty}_{-\infty}\int^{\infty}_{-\infty}g(r,\theta,z,t)e^{-i(k_{z}z-\omega t)}dzdt,
-\end{equation}
-and
-\begin{equation}\label{Backward fourier transform}
-    g(r,\theta,z,t) = \int^{\infty}_{-\infty}\int^{\infty}_{-\infty}\Hat{G}(r,\theta,k_{z},\omega)\mathbf{e}^{i(k_{z}z-\omega t)}dk_{z}d\omega.
-\end{equation} 
+\begin{align}\label{Forward fourier transform}
+    &\Hat{G}(r,\theta,k_{z},\omega) = \frac{1}{4\pi^{2}}\int^{\infty}_{-\infty}\int^{\infty}_{-\infty}g(r,\theta,z,t)e^{-i(k_{z}z-\omega t)}dzdt,\\
+	\text{and}\nonumber \\
+    &g(r,\theta,z,t) = \int^{\infty}_{-\infty}\int^{\infty}_{-\infty}\Hat{G}(r,\theta,k_{z},\omega)\mathbf{e}^{i(k_{z}z-\omega t)}dk_{z}d\omega\label{Backward fourier transform}.
+\end{align} 
 The transformed displacement components are given below.
 \begin{enumerate}[label=(\alph*)]
     \item Radial displacement:
@@ -552,12 +549,12 @@ Substituting for $\Hat{u}_{f\theta}(r,\theta,k_z,\omega)$ (Eq.~(\ref{pin substit
 
 \subsection{Boundary conditions}\label{BCS}
 The field variables derived in the previous subsections involve unknown variables. It is shown in Section~\ref{governing equation for 3d cylinder} that the elastic tube displacement (Eqs.~(\ref{Radial displacement 3d}), (\ref{Azimuthal displacement 3d}) and (\ref{Axial displacement 3d})) and stress (Eqs.~(\ref{sigma rr 3d}), (\ref{tau rz 3d}), (\ref{tau rtheta 3d}) and (\ref{tau ztheta 3d})) fields have eight unknowns: $\Hat{P}_1$, $\Hat{P}_2$, $\Hat{Q}_1$, $\Hat{R}_1$, $\Hat{R}_2$, $\Hat{S}_1$, $\Hat{S}_2$ and $\Hat{T}_1$. Section~\ref{inside fluid modelling} shows that the interior fluid pressure (Eq.~(\ref{P inside 3d})) and the fluid particle displacement fields (Eqs.~(\ref{radial displacement inside 3d}) and (\ref{azimuthal displacement inside 3d})) have two unknowns: $\Hat{P}_{f1}$ and $\Hat{P}_{f2}$. These ten unknown variables can be calculated with the help of boundary conditions on the inner ($r=a$) and outer ($r=b$) surfaces of the elastic tube. This subsection discusses the ten boundary conditions that are used to compute the ten unknown variables. Note that in the previous subsection, all field variables are expressed in the $r-\theta-k_z-\omega$ domain. These closed form expressions are transformed numerically into the $r-k_\theta-k_z-\omega$ domain using the discrete Fourier transform pair given below before use in the boundary conditions.
-\begin{equation}\label{Forward Fourier tranform theta}
-    \Hat{G}(r,k_\theta,k_z,\omega) = \sum_{\theta=0}^{N-1} g(r,\theta,k_z,\omega)\mathbf{e}^{-j2\pi k_\theta\theta/N}
-\end{equation}
-\begin{equation}\label{Backward Fourier transform theta}
-    g(r,\theta,k_z,\omega) = \frac{1}{N}\sum_{k_\theta = 0}^{N-1}\Hat{G}(r,k_\theta,k_z,\omega)\mathbf{e}^{j2\pi k_\theta \theta/N}
-\end{equation}
+\begin{align}
+    &\Hat{G}(r,k_\theta,k_z,\omega) = \sum_{\theta=0}^{N-1} g(r,\theta,k_z,\omega)\mathbf{e}^{-j2\pi k_\theta\theta/N}\label{Forward Fourier tranform theta}\\
+%\end{equation}
+%\begin{equation}\label{Backward Fourier transform theta}
+    &g(r,\theta,k_z,\omega) = \frac{1}{N}\sum_{k_\theta = 0}^{N-1}\Hat{G}(r,k_\theta,k_z,\omega)\mathbf{e}^{j2\pi k_\theta \theta/N}\label{Backward Fourier transform theta}
+\end{align}
 The ten boundary conditions are given below.
 \begin{enumerate}
     \item On the interior surface of the elastic tube ($r=a$), the radial component of the normal stress $\tau_{rr}$ is equal to the negative of the acoustic pressure $p_f$. In the $k_\theta-k_z-\omega$ domain, this can be written as
@@ -594,137 +591,7 @@ The ten boundary conditions are given below.
     \end{align}
     \end{enumerate}
 The expressions for the acoustic pressure, the fluid and the elastic tube displacement components, and the elastic tube stress components derived in the previous subsections are substituted in the above boundary conditions. The resulting equations are given in detail in Section~S3 in the supplimental material.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Results and discussions}\label{sec:results}
-Previous sections discussed the development of a fully-coupled three-dimensional vibroacoustic (3D-VA) model of a fluid-filled elastic tube under external pressure excitations. In this section, the 3D-VA model is used to estimate the interior acoustic pressure field and flow noise in towed sonar arrays.~Section~\ref{azimuthal excitation} presents the interior acoustic pressure field for azimuthally varying external pressure excitation over the fluid-filled elastic tube. Section~\ref{Interior pressure} discusses the on-axis flow noise spectrum due to an external turbulent pressure excitation. External turbulent pressure excitation is computed using the hybrid model developed in this work~(see Section~\ref{sec:hybmodel}). The results are then compared with those obtained using the tube transfer function~\cite{knight1996} and the axisymmetric vibroacoustic~\cite{jineesh2013,Rakesh2024} models available in the literature.~Section~\ref{on-axis flow noise} presents the on-axis flow noise computed using the 3D-VA model and further compares the results with those predicted using tube transfer function~\cite{knight1996} and the axisymmetric~\cite{jineesh2013} models. Further, Section~\ref{parametric study} discusses the flow noise variation for various elastic tube diameters at different tow speeds.
-
-
-\subsection{Interior acoustic pressure field for azimuthally varying external excitation}
-\label{azimuthal excitation}
-The developed 3D-VA model of the fluid-filled elastic tube is initially tested with an exterior harmonic pressure excitation that has a known azimuthal variation. Results for two different external pressure excitation are presented here : (a) $\Hat{p}_0(\theta,k_z) = \sin(\theta)$ (see Fig.~\ref{polar plot sin theta}) and (b) $\Hat{p}_0(\theta,k_z) = \cos(\theta)$ (see Fig.~\ref{polar plot cos theta}).
-
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=3.4in]{polarplot_sin_theta.eps}
-    \caption{(a):~Azimuthal variation in the exterior pressure field $\Hat{p}_0(\theta,k_z) =\sin(\theta)$. (b), (c) and (d):~Azimuthal variation in the interior pressure field (r=a) at 10~Hz, 100~Hz and 1000~Hz, respectively, for $\Hat{p}_0(\theta,k_z) =\sin(\theta)$.}
-    \label{polar plot sin theta}
-\end{figure}
-
-Fig.~\ref{polar plot sin theta}(a) shows the azimuthal variation in the acoustic pressure (see Eqs.~(\ref{acoustic pressure field inside}) - (\ref{SPL for theta variation}) with $\Hat{p}_f$ being replaced with $\sin(\theta)$) at the outer surface of the elastic tube. Figs.~\ref{polar plot sin theta}(b)~-~\ref{polar plot sin theta}(d) shows the resulting azimuthal variation in the acoustic pressure at the inner surface (r=a) of the elastic tube for (b):~10~Hz, (c)~100~Hz and (d)~1000~Hz. Fig.~\ref{polar plot cos theta} shows similar results for $\Hat{p}_0(\theta,k_z) = \cos(\theta)$. The Figs.~\ref{polar plot sin theta} and \ref{polar plot cos theta}
-confirms that the 3D-VA model accurately captures the azimuthal variation (restricted to $n=0$ and $n=1$) in the external pressure excitation.
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=3.4in]{polarplot_cos_theta.eps}
-    \caption{(a):~Azimuthal variation in the exterior pressure field $\Hat{p}_0(\theta,k_z) =\cos(\theta)$. (b), (c) and (d):~Azimuthal variation in the interior pressure field (r=a) at 10~Hz, 100~Hz and 1000~Hz, respectively, for $\Hat{p}_0(\theta,k_z) =\cos(\theta)$.}
-    \label{polar plot cos theta}
-\end{figure}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=3.4in]{Comparison_of_turbulent_pressure_spectrum_of_Hybrid.eps}
-    \caption{The external turbulent pressure spectrum level computed using the hybrid model~(Eq.~(\ref{hybrid model turbulent pressure})).}
-    \label{Hybrid turbulent pressure spectrum}
-\end{figure}
-
-
-\subsection{On-axis flow noise spectrum level for external turbulent pressure excitation}
-\label{Interior pressure}
-This section presents on-axis flow noise spectrum when the elastic tube is excited by an external turbulent pressure field. The external turbulent pressure field (see Fig.~\ref{Hybrid turbulent pressure spectrum}) is computed using the hybrid model (Eq.~(\ref{hybrid model turbulent pressure})). Further, the 3D-VA model is used to calculate the on-axis flow noise spectrum~(see Eqs.~(\ref{on-axis flow noise spectrum}) and (\ref{SPL flow noise spectrum})). This flow noise spectrum is compared with that computed using the tube transfer function model~\cite{knight1996} (see Fig.~\ref{3d vs approx}) and the axisymmetric model~\cite{jineesh2013} (see Fig.~\ref{3d vs axi}). The elastic tube, inside fluid, and hydrophone array parameters used for computation are listed in Table~\ref{tab:PresentVsJineesh}.
-\begin{table}[t]
-\caption{The elastic tube, interior fluid and the hydrophone array parameters used for estimation of flow noise inside the cylinder}
-\begin{center}
-\label{tab:PresentVsJineesh}
-\begin{tabular}{l l}
-& \\ % put some space after the caption 
- \hline
- \textbf{Property} & \textbf{Values}  \\ 
- \hline
- Tube diameter (m)  & 0.04 \\
-% \hline
- Tube thickness (m) & 0.005 \\
-% \hline
- Tow speed/Flow velocity (knots) & 5 \\
-% \hline
- Number of hydrophones & 50 \\
-% \hline
- Length of hydrophone (m) & 0.05 \\
-% \hline
- Hydrophone spacing (m) & 0.25 \\
-% \hline
- Exterior fluid density (kg/m$^{3}$) & 1000 \\
-% \hline
- Interior fluid density (kg/m$^{3}$) & 800 \\
-% \hline
- Reference pressure ($\mu$ Pa) & 1  \\ 
-\hline
-\end{tabular}
-\end{center}
-\end{table}
-It can be seen from Figs.~\ref{3d vs approx} and \ref{3d vs axi} that the on-axis acoustic pressure computed using the 3D-VA model follows the external turbulent pressure excitation given in Fig.~\ref{Hybrid turbulent pressure spectrum} - gradually increasing up to and peaking at the convective wavenumber~($u_c = \omega/k_c$), and decreasing exponentially beyond. Thus, the flow noise inside the tube is dominated by the contribution from wavenumbers less than the convective wavenumber.
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=3.4in]{Inside_pressure_comparison_3d_and_approx.eps}
-    \caption{Comparison of on-axis flow noise spectrum level due to a turbulent pressure excitation computed using the 3D-VA model and the tube transfer function model~\cite{knight1996}.} 
-    \label{3d vs approx}
-\end{figure}
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=3.4in]{Inside_pressure_comparison_3d_and_axi.eps}
-    \caption{Comparison of on-axis flow noise spectrum level due to a turbulent pressure excitation computed using the 3D-VA model and the axisymmetric model~\cite{jineesh2013}.}
-    \label{3d vs axi}
-\end{figure}
-
-In the tube transfer function model (Fig.~\ref{3d vs approx}) and the axisymmetric model (Fig.~\ref{3d vs axi}) predictions, the peak occurs at a lower wavenumber than the convective wavenumber. For example, at 10~Hz, the peak occurs at $1.58$~rad/m in the tube transfer function model and at $1.56$~rad/m in the axisymmetric model. Note that the convective wavenumber at 10~Hz for 5~knots is $k_c = 35.93$~rad/m. This smaller wavenumber where the first peak occurs in the transfer function and the axisymmetric models corresponds to the breathing mode wavenumber, $k_b$, of the elastic tube given by~\cite{knight1996}
-\begin{equation}\label{breathing wavenumber}
-k_b^2 = 2\rho_0\omega^2R/Et.
-\end{equation}
-In Eq.~(\ref{breathing wavenumber}), $\rho_0$ is the density of the inside fluid, $R$ is the outer radius of the elastic tube, $E$ is the Young's modulus of the tube and $t$ is the thickness of the tube. The tube transfer function model and the axisymmetric model consider only the breathing mode~($n=0$) variations while modeling the fluid-filled elastic tube. The present 3D-VA model considers both $n=0$~(breathing) and $n=1$~(first order) variations in the solid and fluid displacement fields. The absence of peaks at the breathing wavenumber in the present 3D-VA model indeed demonstrates a cumulative effect of including both $n=0$ and $n=1$ order terms in the fully-coupled vibroacoustic formulation. The same is the reason for the difference in the flow noise spectrum between the 3D-VA model and the other models beyond the breathing wavenumber.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{On-axis flow noise for external turbulent pressure excitation}
-\label{on-axis flow noise}
-
-This section presents the flow noise as heard by the hydrophones placed inside the fluid-filled elastic tube. The flow noise is computed using Eqs.~(\ref{on axis flow noise equation}) and (\ref{spl on-axis flow noise}). Note that flow noise at a given frequency can be obtained by integrating the corresponding flow noise spectrum~(Figs.~\ref{3d vs approx} and \ref{3d vs axi}) over the wavenumber. Fig.~\ref{3d vs knight vs jineesh} shows the variation in flow noise with frequency, computed using the 3D-VA model. It also depicts the flow noise predicted by the tube transfer function~\cite{knight1996} and the axisymmetric~\cite{jineesh2013} models. Note that in all cases, the external turbulent pressure excitation is given by Eq.~(\ref{hybrid model turbulent pressure})~(the hybrid model). The elastic tube, interior fluid and hydrophone parameters are given in Table~\ref{tab:PresentVsJineesh}.
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=3.4in]{Flow_noise_comparison_3D_vs_Knight_Jineesh.eps}
-    \caption{The on-axis flow noise due to the turbulent pressure excitation computed using the 3D-VA model, the tube transfer function model~\cite{knight1996} and the axisymmetric model~\cite{jineesh2013}.} 
-    \label{3d vs knight vs jineesh}
-\end{figure}
- It can be seen from Fig.~\ref{3d vs knight vs jineesh} that the flow noise decreases with frequency. This decrease is attributed to the reduction in the external turbulent pressure excitation with frequency as shown in Fig.~\ref{Hybrid turbulent pressure spectrum}. As mentioned earlier, the 3D-VA model considers both $n=0$~(breathing) and $n=1$ variation in the acoustic pressure field. This results in a better flow noise prediction than the transfer function and axisymmetric models, where only the $n=0$ or the breathing wavenumber is considered. The transfer function and the axisymmetric models underpredict the flow noise in the mid frequency range (10~Hz - 200~Hz). It is evident from Figs.~\ref{3d vs approx} and~\ref{3d vs axi} that the difference between the 3D-VA and other models is not significant as the frequency increases. For that reason, the flow noise predictions (Fig.~\ref{3d vs knight vs jineesh}) by the three models are quite close to each other at high frequencies (beyond $\sim$ 200~Hz).
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{On-axis flow noise for different tube diameters and tow speeds}
-\label{parametric study}
-
-In this section, the on-axis flow noise~(Eqs.~(\ref{on axis flow noise equation}) and (\ref{spl on-axis flow noise})) is computed for different elastic tube diameters at different tow speeds. Fig.~\ref{flow noise diff dia 3d} shows the comparison of on-axis flow noise estimated for different elastic tube diameters at 5~knots and  Fig.~\ref{flow noise diff speed 3d} shows the variation in the flow noise for a tube of 40~mm diameter at different tow speeds. The variation in flow noise is attributed to the changes in external turbulent pressure excitation with tube diameters and tow speeds, as shown in Fig.~\ref{non dimensional plot of hybrid model}~(the non-dimensional plot). It was shown in Fig.~\ref{non dimensional plot of hybrid model} that an increase in diameter or a decrease in tow speed results in a reduction in the non-dimensional power spectral density. This leads to a decrease in on-axis flow noise inside the fluid-filled elastic tube with increasing tube diameter~(Fig.~\ref{flow noise diff dia 3d}) or decreasing tow speeds~(Fig.~\ref{flow noise diff speed 3d}).
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=3.4in]{Comparison_of_flow_noise_3D_different_dia.eps}
-    \caption{Comparison of on-axis flow noise estimated using 3D-VA model, due to a turbulent pressure excitation at 5~knots over an elastic tube for different diameters.}
-    \label{flow noise diff dia 3d}
-\end{figure}
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=3.4in]{Comparison_of_flow_noise_3D_Different_speed.eps}
-    \caption{Comparison of on-axis flow noise estimated using 3D-VA model, due to a turbulent pressure excitation over an elastic tube of 40~mm diameter at different tow speeds.}
-    \label{flow noise diff speed 3d}
-\end{figure}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Solution methodology}\label{solution methods}
 Previous section discussed the boundary conditions associated with the elastic tube displacements and the acoustic pressure variations inside and outside the elastic tube. These boundary conditions result in ten equations involving twelve unknown variables~(see section~S3 in the supplimental material). Of the twelve unknown variables, only ten are independent. A further simplification of the boundary condition to include only the ten independent unknowns are presented in section~S4 in supplimental material. The resulting system of algebraic equations may be represented in a matrix form,
@@ -768,55 +635,138 @@ The on-axis flow noise level can be computed using
 \end{equation}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Figures}
-\label{sect_figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-All figures should be positioned at the top of the page where possible.  All figures should be numbered consecutively and centered under the figure as shown in Fig.~\ref{figure_ASME}. All text within the figure should be no smaller than 7~pt. There should be a minimum two line spaces between figures and text. The number of a referenced figure or table in the text should be preceded by Fig.\ or Tab.\ respectively unless the reference starts a sentence in which case Fig.\ or Tab.\ should be expanded to Figure or Table.
+\section{Results and discussions}\label{sec:results}
+Previous sections discussed the development of a fully-coupled three-dimensional vibroacoustic (3D-VA) model of a fluid-filled elastic tube under external pressure excitations. In this section, the 3D-VA model is used to estimate the interior acoustic pressure field and flow noise in towed sonar arrays.~Section~\ref{azimuthal excitation} presents the interior acoustic pressure field for azimuthally varying external pressure excitation over the fluid-filled elastic tube. Section~\ref{Interior pressure} discusses the on-axis flow noise spectrum due to an external turbulent pressure excitation. External turbulent pressure excitation is computed using the hybrid model developed in this work~(see Section~\ref{sec:hybmodel}). The results are then compared with those obtained using the tube transfer function~\cite{knight1996} and the axisymmetric vibroacoustic~\cite{jineesh2013,Rakesh2024} models available in the literature.~Section~\ref{on-axis flow noise} presents the on-axis flow noise computed using the 3D-VA model and further compares the results with those predicted using tube transfer function~\cite{knight1996} and the axisymmetric~\cite{jineesh2013} models. Further, Section~\ref{parametric study} discusses the flow noise variation for various elastic tube diameters at different tow speeds.
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%% begin figure %%%%%%%%%%%%%%%%%%%
-\begin{figure}[t]
+\subsection{Interior acoustic pressure field for azimuthally varying external excitation}
+\label{azimuthal excitation}
+The developed 3D-VA model of the fluid-filled elastic tube is initially tested with an exterior harmonic pressure excitation that has a known azimuthal variation. Results for two different external pressure excitation are presented here : (a) $\Hat{p}_0(\theta,k_z) = \sin(\theta)$ (see Fig.~\ref{polar plot sin theta}) and (b) $\Hat{p}_0(\theta,k_z) = \cos(\theta)$ (see Fig.~\ref{polar plot cos theta}).
+
+
+\begin{figure}[ht]
+    \centerline{
+    \includegraphics[width=4.5in]{polarplot_sin_theta.eps}}
+    \caption{(a):~Azimuthal variation in the exterior pressure field $\Hat{p}_0(\theta,k_z) =\sin(\theta)$. (b), (c) and (d):~Azimuthal variation in the interior pressure field ($r=a$) at 10~Hz, 100~Hz and 1000~Hz, respectively, for $\Hat{p}_0(\theta,k_z) =\sin(\theta)$.}
+    \label{polar plot sin theta}
+\end{figure}
+
+Fig.~\ref{polar plot sin theta}(a) shows the azimuthal variation in the acoustic pressure (see Eqs.~(\ref{acoustic pressure field inside}) - (\ref{SPL for theta variation}) with $\Hat{p}_f$ being replaced with $\sin(\theta)$) at the outer surface of the elastic tube. Figs.~\ref{polar plot sin theta}(b)~-~\ref{polar plot sin theta}(d) shows the resulting azimuthal variation in the acoustic pressure at the inner surface (r=a) of the elastic tube for (b):~10~Hz, (c)~100~Hz and (d)~1000~Hz. Fig.~\ref{polar plot cos theta} shows similar results for $\Hat{p}_0(\theta,k_z) = \cos(\theta)$. The Figs.~\ref{polar plot sin theta} and \ref{polar plot cos theta}
+confirms that the 3D-VA model accurately captures the azimuthal variation (restricted to $n=0$ and $n=1$) in the external pressure excitation.
+
+\begin{figure}[ht]
+    \centerline{
+    \includegraphics[width=4.5in]{polarplot_cos_theta.eps}}
+    \caption{(a):~Azimuthal variation in the exterior pressure field $\Hat{p}_0(\theta,k_z) =\cos(\theta)$. (b), (c) and (d):~Azimuthal variation in the interior pressure field ($r=a$) at 10~Hz, 100~Hz and 1000~Hz, respectively, for $\Hat{p}_0(\theta,k_z) =\cos(\theta)$.}
+    \label{polar plot cos theta}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{figure}[ht]
+    \centerline{
+    \includegraphics[width=4.3in]{Comparison_of_turbulent_pressure_spectrum_of_Hybrid.eps}}
+    \caption{The external turbulent pressure spectrum level computed using the hybrid model~(Eq.~(\ref{hybrid model turbulent pressure})).}
+    \label{Hybrid turbulent pressure spectrum}
+\end{figure}
+
+
+\subsection{On-axis flow noise spectrum level for external turbulent pressure excitation}
+\label{Interior pressure}
+This section presents on-axis flow noise spectrum when the elastic tube is excited by an external turbulent pressure field. The external turbulent pressure field (see Fig.~\ref{Hybrid turbulent pressure spectrum}) is computed using the hybrid model (Eq.~(\ref{hybrid model turbulent pressure})). Further, the 3D-VA model is used to calculate the on-axis flow noise spectrum~(see Eqs.~(\ref{on-axis flow noise spectrum}) and (\ref{SPL flow noise spectrum})). This flow noise spectrum is compared with that computed using the tube transfer function model~\cite{knight1996} (see Fig.~\ref{3d vs approx}) and the axisymmetric model~\cite{jineesh2013} (see Fig.~\ref{3d vs axi}). The elastic tube, inside fluid, and hydrophone array parameters used for computation are listed in Table~\ref{tab:PresentVsJineesh}.
+\begin{table}[t]
+\caption{The elastic tube, interior fluid and the hydrophone array parameters used for estimation of flow noise inside the cylinder}
 \begin{center}
-\setlength{\unitlength}{0.012500in}%
-\begin{picture}(115,35)(255,545)
-\thicklines
-\put(255,545){\framebox(115,35){}}
-\put(275,560){Beautiful Figure}
-\end{picture}
+\label{tab:PresentVsJineesh}
+\begin{tabular}{l l}
+& \\ % put some space after the caption 
+ \hline
+ \textbf{Property} & \textbf{Values}  \\ 
+ \hline
+ Tube diameter (m)  & 0.04 \\
+% \hline
+ Tube thickness (m) & 0.005 \\
+% \hline
+ Tow speed/Flow velocity (knots) & 5 \\
+% \hline
+ Number of hydrophones & 50 \\
+% \hline
+ Length of hydrophone (m) & 0.05 \\
+% \hline
+ Hydrophone spacing (m) & 0.25 \\
+% \hline
+ Exterior fluid density (kg/m$^{3}$) & 1000 \\
+% \hline
+ Interior fluid density (kg/m$^{3}$) & 800 \\
+% \hline
+ Reference pressure ($\mu$ Pa) & 1  \\ 
+\hline
+\end{tabular}
 \end{center}
-\caption{The caption of a single sentence does not have period at the end}
-\label{figure_ASME} 
+\end{table}
+It can be seen from Figs.~\ref{3d vs approx} and \ref{3d vs axi} that the on-axis acoustic pressure computed using the 3D-VA model follows the external turbulent pressure excitation given in Fig.~\ref{Hybrid turbulent pressure spectrum} - gradually increasing up to and peaking at the convective wavenumber~($u_c = \omega/k_c$), and decreasing exponentially beyond. Thus, the flow noise inside the tube is dominated by the contribution from wavenumbers less than the convective wavenumber.
+
+\begin{figure}
+    \centerline{
+    \includegraphics[width=4.3in]{Inside_pressure_comparison_3d_and_approx.eps}}
+    \caption{Comparison of on-axis flow noise spectrum level due to a turbulent pressure excitation computed using the 3D-VA model and the tube transfer function model~\cite{knight1996}.} 
+    \label{3d vs approx}
 \end{figure}
-%%%%%%%%%%%%%%%% end figure %%%%%%%%%%%%%%%%%%% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-In the following subsections, I have inserted figures that have been provided by authors in order to demonstrate what to avoid.  In each case the authors provided figures that are 3.25in wide and 600dpi in the .tif graphics format.  The papers containing these figures have been held from production due to their poor quality. 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{The 1st Example of Bad Figure}
-
-%%%%%%%%%%%%%%%% begin figure %%%%%%%%%%%%%%%%%%%
-%%% 3.34in is the maximum width you can have for a figure
-\begin{figure} 
-\centerline{\includegraphics[width=3.34in]{figure/FMANU_MD_05_1107_11.jpg}}
-\caption{Example taken from a paper that was held from production because the image quality is poor.  ASME sets figures captions in 8pt, Helvetica Bold.}
-\label{fig_example1.jpg}
+\begin{figure}
+    \centerline{
+    \includegraphics[width=4.3in]{Inside_pressure_comparison_3d_and_axi.eps}}
+    \caption{Comparison of on-axis flow noise spectrum level due to a turbulent pressure excitation computed using the 3D-VA model and the axisymmetric model~\cite{jineesh2013}.}
+    \label{3d vs axi}
 \end{figure}
-%%%%%%%%%%%%%%%% end figure %%%%%%%%%%%%%%%%%%%
 
-In order to place the figure in this template using MSWord, select Insert Picture from File, and use wrapping that is top and bottom. Make sure the figure is 3.25in wide.
- 
-Figure~`\ref{fig_example1.jpg}
-was taken from a recent paper that was held from publication, because the text is fuzzy and unreadable. It was probably obtained by taking a screen shot of the computer output of the authors software. This means the original figure was 72dpi (dots per inch) on a computer screen. There is no way to improve the quality such a low resolution figure.
- 
-In order to understand how poor the quality of this figure is, please zoom in slightly, say to 200\%. Notice that while the font of the paper is clear at this size, the font in the figures is fuzzy and blurred. It is impossible to make out the small symbol beside the numbers along the abscissa of the graph. Now consider the labels Time and Cost. They are clearly in fonts larger that the text of the article, yet the pixilation or rasterization, associated with low resolution is obvious. This figure must be regenerated at higher resolution to ensure quality presentation.
-
-The poor quality of this figure is immediately obvious on the printed page, and reduces the impact of the research contribution of the paper, and in fact detracts from the perceived quality of the journal itself.
+In the tube transfer function model (Fig.~\ref{3d vs approx}) and the axisymmetric model (Fig.~\ref{3d vs axi}) predictions, the peak occurs at a lower wavenumber than the convective wavenumber. For example, at 10~Hz, the peak occurs at $1.58$~rad/m in the tube transfer function model and at $1.56$~rad/m in the axisymmetric model. Note that the convective wavenumber at 10~Hz for 5~knots is $k_c = 35.93$~rad/m. This smaller wavenumber where the first peak occurs in the transfer function and the axisymmetric models corresponds to the breathing mode wavenumber, $k_b$, of the elastic tube given by~\cite{knight1996}
+\begin{equation}\label{breathing wavenumber}
+k_b^2 = 2\rho_0\omega^2R/Et.
+\end{equation}
+In Eq.~(\ref{breathing wavenumber}), $\rho_0$ is the density of the inside fluid, $R$ is the outer radius of the elastic tube, $E$ is the Young's modulus of the tube and $t$ is the thickness of the tube. The tube transfer function model and the axisymmetric model consider only the breathing mode~($n=0$) variations while modeling the fluid-filled elastic tube. The present 3D-VA model considers both $n=0$~(breathing) and $n=1$~(first order) variations in the solid and fluid displacement fields. The absence of peaks at the breathing wavenumber in the present 3D-VA model indeed demonstrates a cumulative effect of including both $n=0$ and $n=1$ order terms in the fully-coupled vibroacoustic formulation. The same is the reason for the difference in the flow noise spectrum between the 3D-VA model and the other models beyond the breathing wavenumber.
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\subsection{On-axis flow noise for external turbulent pressure excitation}
+\label{on-axis flow noise}
+
+This section presents the flow noise as heard by the hydrophones placed inside the fluid-filled elastic tube. The flow noise is computed using Eqs.~(\ref{on axis flow noise equation}) and (\ref{spl on-axis flow noise}). Note that flow noise at a given frequency can be obtained by integrating the corresponding flow noise spectrum~(Figs.~\ref{3d vs approx} and \ref{3d vs axi}) over the wavenumber. Fig.~\ref{3d vs knight vs jineesh} shows the variation in flow noise with frequency, computed using the 3D-VA model. It also depicts the flow noise predicted by the tube transfer function~\cite{knight1996} and the axisymmetric~\cite{jineesh2013} models. Note that in all cases, the external turbulent pressure excitation is given by Eq.~(\ref{hybrid model turbulent pressure})~(the hybrid model). The elastic tube, interior fluid and hydrophone parameters are given in Table~\ref{tab:PresentVsJineesh}.
+\begin{figure}
+    \centerline{
+    \includegraphics[width=4.3in]{Flow_noise_comparison_3D_vs_Knight_Jineesh.eps}}
+    \caption{The on-axis flow noise due to the turbulent pressure excitation computed using the 3D-VA model, the tube transfer function model~\cite{knight1996} and the axisymmetric model~\cite{jineesh2013}.} 
+    \label{3d vs knight vs jineesh}
+\end{figure}
+ It can be seen from Fig.~\ref{3d vs knight vs jineesh} that the flow noise decreases with frequency. This decrease is attributed to the reduction in the external turbulent pressure excitation with frequency as shown in Fig.~\ref{Hybrid turbulent pressure spectrum}. As mentioned earlier, the 3D-VA model considers both $n=0$~(breathing) and $n=1$ variation in the acoustic pressure field. This results in a better flow noise prediction than the transfer function and axisymmetric models, where only the $n=0$ or the breathing wavenumber is considered. The transfer function and the axisymmetric models underpredict the flow noise in the mid frequency range (10~Hz - 200~Hz). It is evident from Figs.~\ref{3d vs approx} and~\ref{3d vs axi} that the difference between the 3D-VA and other models is not significant as the frequency increases. For that reason, the flow noise predictions (Fig.~\ref{3d vs knight vs jineesh}) by the three models are quite close to each other at high frequencies (beyond $\sim$ 200~Hz).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{On-axis flow noise for different tube diameters and tow speeds}
+\label{parametric study}
+
+In this section, the on-axis flow noise~(Eqs.~(\ref{on axis flow noise equation}) and (\ref{spl on-axis flow noise})) is computed for different elastic tube diameters at different tow speeds. Fig.~\ref{flow noise diff dia 3d} shows the comparison of on-axis flow noise estimated for different elastic tube diameters at 5~knots and  Fig.~\ref{flow noise diff speed 3d} shows the variation in the flow noise for a tube of 40~mm diameter at different tow speeds. The variation in flow noise is attributed to the changes in external turbulent pressure excitation with tube diameters and tow speeds, as shown in Fig.~\ref{non dimensional plot of hybrid model}~(the non-dimensional plot). It was shown in Fig.~\ref{non dimensional plot of hybrid model} that an increase in diameter or a decrease in tow speed results in a reduction in the non-dimensional power spectral density. This leads to a decrease in on-axis flow noise inside the fluid-filled elastic tube with increasing tube diameter~(Fig.~\ref{flow noise diff dia 3d}) or decreasing tow speeds~(Fig.~\ref{flow noise diff speed 3d}).
+
+\begin{figure}
+    \centerline{
+    \includegraphics[width=4.3in]{Comparison_of_flow_noise_3D_different_dia.eps}}
+    \caption{Comparison of on-axis flow noise estimated using 3D-VA model, due to a turbulent pressure excitation at 5~knots over an elastic tube for different diameters.}
+    \label{flow noise diff dia 3d}
+\end{figure}
+\begin{figure}
+    \centerline{
+    \includegraphics[width=4.3in]{Comparison_of_flow_noise_3D_Different_speed.eps}}
+    \caption{Comparison of on-axis flow noise estimated using 3D-VA model, due to a turbulent pressure excitation over an elastic tube of 40~mm diameter at different tow speeds.}
+    \label{flow noise diff speed 3d}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions}
 A new semi-empirical (hybrid) model is developed for estimating the wavenumber-frequency spectrum of turbulent pressure for an axial flow past a solid cylinder. The hybrid model is derived using insights from different turbulent pressure semi-empirical models (Chase~\cite{Chase1981} and Frendi \textit{et al}.~\cite{frendi2020}) and the experimental results of Unnikrishnan \textit{et al}.~\cite{Unni2011}. The hybrid model predictions are found to be superior to the existing semi-empirical models and compares reasonably well with available experimental results. 
@@ -836,7 +786,7 @@ The on-axis flow noise is then estimated for different elastic tube diameters an
 \begin{acknowledgment}
 This research was supported by the Defence Research and Development Organisation, India. The authors express their sincere gratitude to Dr.~Ganesh Natarajan and Dr.~Pramod Kuntikana (Indian Institute of Technology Palakkad) for their invaluable support and guidance throughout this investigation. Special thanks also go to Dr.~T.~Santhanakrishnan, Mr.~Sameer Abdul Azeez, Mr.~Jineesh George, Mr.~Samuel Theophilus, and Mr.~Anshath Hussain (Naval Physical \& Oceanographic Laboratory) for their invaluable feedback and assistance with this project. We express our gratitude to Prof.~A.~Seshadri Sekhar, Director of the Indian Institute of Technology Palakkad and Dr.~Duvvuri Seshagiri, OS and Director of the Naval Physical \& Oceanographic Laboratory, for their support in enabling this collaborative research.
 \end{acknowledgment}
-
+\nolinenumbers
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % The bibliography is stored in an external database file
 % in the BibTeX format (file_name.bib).  The bibliography is
@@ -864,30 +814,11 @@ This research was supported by the Defence Research and Development Organisation
 \bibliography{asme2e}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-\appendix       %%% starting appendix
-\section*{Appendix A: Head of First Appendix}
-Avoid Appendices if possible.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Appendix B: Head of Second Appendix}
-\subsection*{Subsection head in appendix}
-The equation counter is not reset in an appendix and the numbers will
-follow one continual sequence from the beginning of the article to the very end as shown in the following example.
-\begin{equation}
-a = b + c.
-\end{equation}
 
 \newpage
 \listoffigures
 
-\vskip 1 in
-This section will be created when figures are included with a caption.
-
 \newpage
 \listoftables
-
-\vskip 1 in
-This section will be created when tables are included with a caption.
 
 \end{document}
