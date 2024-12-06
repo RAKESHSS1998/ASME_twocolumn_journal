@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.6)  6 DEC 2024 12:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.6.6)  6 DEC 2024 13:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -419,11 +419,11 @@ Underfull \hbox (badness 10000) detected at line 103
  []
 
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 106.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 108.
 
 
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1
-09.
+11.
 (d:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) [1
@@ -469,7 +469,7 @@ ted-to.pdf>
 (epstopdf)                    size: 22986 bytes
 (epstopdf)             Command: <repstopdf --outfile=Chase,frendi_vs_Unni_compa
 rison-eps-converted-to.pdf Chase,frendi_vs_Unni_comparison.eps>
-(epstopdf)             \includegraphics on input line 217.
+(epstopdf)             \includegraphics on input line 218.
 Package epstopdf Info: Output file is already uptodate.
 <Chase,frendi_vs_Unni_comparison-eps-converted-to.pdf, id=224, 2312.64pt x 1734
 .48pt>
@@ -477,7 +477,7 @@ File: Chase,frendi_vs_Unni_comparison-eps-converted-to.pdf Graphic file (type p
 df)
 <use Chase,frendi_vs_Unni_comparison-eps-converted-to.pdf>
 Package pdftex.def Info: Chase,frendi_vs_Unni_comparison-eps-converted-to.pdf  
-used on input line 217.
+used on input line 218.
 (pdftex.def)             Requested size: 325.215pt x 243.91064pt.
 
 Underfull \vbox (badness 3343) has occurred while \output is active []
@@ -489,16 +489,16 @@ Underfull \vbox (badness 3343) has occurred while \output is active []
 [9]
 Package epstopdf Info: Source file: <Hybrid_model_Chase_frendi_vs_Unni_comparis
 on.eps>
-(epstopdf)                    date: 2024-12-06 10:47:43
-(epstopdf)                    size: 166942 bytes
+(epstopdf)                    date: 2024-12-06 12:58:34
+(epstopdf)                    size: 160709 bytes
 (epstopdf)             Output file: <Hybrid_model_Chase_frendi_vs_Unni_comparis
 on-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-12-06 10:51:37
-(epstopdf)                    size: 40576 bytes
+(epstopdf)                    date: 2024-12-06 12:58:49
+(epstopdf)                    size: 39212 bytes
 (epstopdf)             Command: <repstopdf --outfile=Hybrid_model_Chase_frendi_
 vs_Unni_comparison-eps-converted-to.pdf Hybrid_model_Chase_frendi_vs_Unni_compa
 rison.eps>
-(epstopdf)             \includegraphics on input line 260.
+(epstopdf)             \includegraphics on input line 261.
 Package epstopdf Info: Output file is already uptodate.
 <Hybrid_model_Chase_frendi_vs_Unni_comparison-eps-converted-to.pdf, id=275, 231
 2.64pt x 1734.48pt>
@@ -506,7 +506,7 @@ File: Hybrid_model_Chase_frendi_vs_Unni_comparison-eps-converted-to.pdf Graphic
  file (type pdf)
 <use Hybrid_model_Chase_frendi_vs_Unni_comparison-eps-converted-to.pdf>
 Package pdftex.def Info: Hybrid_model_Chase_frendi_vs_Unni_comparison-eps-conve
-rted-to.pdf  used on input line 260.
+rted-to.pdf  used on input line 261.
 (pdftex.def)             Requested size: 325.215pt x 243.91064pt.
 
 Underfull \vbox (badness 7362) has occurred while \output is active []
@@ -525,7 +525,7 @@ rum-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Chase_hybrid_Frendi_outsid
 e_pressure_Spectrum-eps-converted-to.pdf Chase_hybrid_Frendi_outside_pressure_S
 pectrum.eps>
-(epstopdf)             \includegraphics on input line 272.
+(epstopdf)             \includegraphics on input line 273.
 Package epstopdf Info: Output file is already uptodate.
 <Chase_hybrid_Frendi_outside_pressure_Spectrum-eps-converted-to.pdf, id=300, 25
 29.45pt x 1373.13pt>
@@ -533,7 +533,7 @@ File: Chase_hybrid_Frendi_outside_pressure_Spectrum-eps-converted-to.pdf Graphi
 c file (type pdf)
 <use Chase_hybrid_Frendi_outside_pressure_Spectrum-eps-converted-to.pdf>
 Package pdftex.def Info: Chase_hybrid_Frendi_outside_pressure_Spectrum-eps-conv
-erted-to.pdf  used on input line 272.
+erted-to.pdf  used on input line 273.
 (pdftex.def)             Requested size: 310.76122pt x 168.68655pt.
 
 Underfull \vbox (badness 1242) has occurred while \output is active []
@@ -552,7 +552,7 @@ onverted-to.pdf>
 (epstopdf)                    size: 25120 bytes
 (epstopdf)             Command: <repstopdf --outfile=Non_dimensional_plot_of_hy
 brid_model-eps-converted-to.pdf Non_dimensional_plot_of_hybrid_model.eps>
-(epstopdf)             \includegraphics on input line 293.
+(epstopdf)             \includegraphics on input line 294.
 Package epstopdf Info: Output file is already uptodate.
 <Non_dimensional_plot_of_hybrid_model-eps-converted-to.pdf, id=346, 2529.45pt x
  1373.13pt>
@@ -560,7 +560,7 @@ File: Non_dimensional_plot_of_hybrid_model-eps-converted-to.pdf Graphic file (t
 ype pdf)
 <use Non_dimensional_plot_of_hybrid_model-eps-converted-to.pdf>
 Package pdftex.def Info: Non_dimensional_plot_of_hybrid_model-eps-converted-to.
-pdf  used on input line 293.
+pdf  used on input line 294.
 (pdftex.def)             Requested size: 310.76122pt x 168.68655pt.
 
 
@@ -573,13 +573,13 @@ Package epstopdf Info: Source file: <Sonar_array_element.eps>
 (epstopdf)                    size: 40014 bytes
 (epstopdf)             Command: <repstopdf --outfile=Sonar_array_element-eps-co
 nverted-to.pdf Sonar_array_element.eps>
-(epstopdf)             \includegraphics on input line 305.
+(epstopdf)             \includegraphics on input line 306.
 Package epstopdf Info: Output file is already uptodate.
 <Sonar_array_element-eps-converted-to.pdf, id=372, 500.87125pt x 220.825pt>
 File: Sonar_array_element-eps-converted-to.pdf Graphic file (type pdf)
 <use Sonar_array_element-eps-converted-to.pdf>
 Package pdftex.def Info: Sonar_array_element-eps-converted-to.pdf  used on inpu
-t line 305.
+t line 306.
 (pdftex.def)             Requested size: 310.76122pt x 137.01453pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -602,7 +602,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [17]
-Overfull \hbox (14.86938pt too wide) in paragraph at lines 379--381
+Overfull \hbox (14.86938pt too wide) in paragraph at lines 380--382
 \OT1/phv/m/n/10.95 where $[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 k[]; !\OT1/
 cmr/m/n/10.95 )$\OT1/phv/m/n/10.95 , $[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95
  k[]; !\OT1/cmr/m/n/10.95 )$\OT1/phv/m/n/10.95 , $[]\OT1/cmr/m/n/10.95 (\OML/cm
@@ -685,37 +685,40 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [31]
 Package epstopdf Info: Source file: <polarplot_sin_theta.eps>
-(epstopdf)                    date: 2024-12-06 10:47:43
-(epstopdf)                    size: 153125 bytes
+(epstopdf)                    date: 2024-12-06 13:20:46
+(epstopdf)                    size: 149644 bytes
 (epstopdf)             Output file: <polarplot_sin_theta-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-12-06 11:32:07
-(epstopdf)                    size: 24063 bytes
+(epstopdf)                    date: 2024-12-06 13:21:02
+(epstopdf)                    size: 23591 bytes
 (epstopdf)             Command: <repstopdf --outfile=polarplot_sin_theta-eps-co
 nverted-to.pdf polarplot_sin_theta.eps>
-(epstopdf)             \includegraphics on input line 651.
+(epstopdf)             \includegraphics on input line 652.
 Package epstopdf Info: Output file is already uptodate.
 <polarplot_sin_theta-eps-converted-to.pdf, id=620, 2601.72pt x 1951.29pt>
 File: polarplot_sin_theta-eps-converted-to.pdf Graphic file (type pdf)
 <use polarplot_sin_theta-eps-converted-to.pdf>
 Package pdftex.def Info: polarplot_sin_theta-eps-converted-to.pdf  used on inpu
-t line 651.
-(pdftex.def)             Requested size: 325.215pt x 243.91064pt.
+t line 652.
+(pdftex.def)             Requested size: 354.12256pt x 265.5863pt.
+
+
+[32 <./polarplot_sin_theta-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <polarplot_cos_theta.eps>
-(epstopdf)                    date: 2024-12-06 10:47:43
-(epstopdf)                    size: 152989 bytes
+(epstopdf)                    date: 2024-12-06 13:21:33
+(epstopdf)                    size: 149594 bytes
 (epstopdf)             Output file: <polarplot_cos_theta-eps-converted-to.pdf>
-(epstopdf)                    date: 2024-12-06 11:32:09
-(epstopdf)                    size: 23960 bytes
+(epstopdf)                    date: 2024-12-06 13:21:50
+(epstopdf)                    size: 23500 bytes
 (epstopdf)             Command: <repstopdf --outfile=polarplot_cos_theta-eps-co
 nverted-to.pdf polarplot_cos_theta.eps>
-(epstopdf)             \includegraphics on input line 661.
+(epstopdf)             \includegraphics on input line 662.
 Package epstopdf Info: Output file is already uptodate.
-<polarplot_cos_theta-eps-converted-to.pdf, id=629, 2601.72pt x 1951.29pt>
+<polarplot_cos_theta-eps-converted-to.pdf, id=640, 2601.72pt x 1951.29pt>
 File: polarplot_cos_theta-eps-converted-to.pdf Graphic file (type pdf)
 <use polarplot_cos_theta-eps-converted-to.pdf>
 Package pdftex.def Info: polarplot_cos_theta-eps-converted-to.pdf  used on inpu
-t line 661.
-(pdftex.def)             Requested size: 325.215pt x 243.91064pt.
+t line 662.
+(pdftex.def)             Requested size: 354.12256pt x 265.5863pt.
 Package epstopdf Info: Source file: <Comparison_of_turbulent_pressure_spectrum_
 of_Hybrid.eps>
 (epstopdf)                    date: 2024-12-06 10:47:42
@@ -727,19 +730,20 @@ of_Hybrid-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Comparison_of_turbulent_pr
 essure_spectrum_of_Hybrid-eps-converted-to.pdf Comparison_of_turbulent_pressure
 _spectrum_of_Hybrid.eps>
-(epstopdf)             \includegraphics on input line 671.
+(epstopdf)             \includegraphics on input line 672.
 Package epstopdf Info: Output file is already uptodate.
 <Comparison_of_turbulent_pressure_spectrum_of_Hybrid-eps-converted-to.pdf, id=6
-30, 2529.45pt x 1373.13pt>
+41, 2529.45pt x 1373.13pt>
 File: Comparison_of_turbulent_pressure_spectrum_of_Hybrid-eps-converted-to.pdf 
 Graphic file (type pdf)
 <use Comparison_of_turbulent_pressure_spectrum_of_Hybrid-eps-converted-to.pdf>
 Package pdftex.def Info: Comparison_of_turbulent_pressure_spectrum_of_Hybrid-ep
-s-converted-to.pdf  used on input line 671.
+s-converted-to.pdf  used on input line 672.
 (pdftex.def)             Requested size: 310.76122pt x 168.68655pt.
 
+Underfull \vbox (badness 1502) has occurred while \output is active []
 
-[32 <./polarplot_sin_theta-eps-converted-to.pdf>]
+
 
 [33 <./polarplot_cos_theta-eps-converted-to.pdf> <./Comparison_of_turbulent_pre
 ssure_spectrum_of_Hybrid-eps-converted-to.pdf>]
@@ -754,15 +758,15 @@ ps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Inside_pressure_comparison
 _3d_and_approx-eps-converted-to.pdf Inside_pressure_comparison_3d_and_approx.ep
 s>
-(epstopdf)             \includegraphics on input line 714.
+(epstopdf)             \includegraphics on input line 715.
 Package epstopdf Info: Output file is already uptodate.
-<Inside_pressure_comparison_3d_and_approx-eps-converted-to.pdf, id=676, 2529.45
+<Inside_pressure_comparison_3d_and_approx-eps-converted-to.pdf, id=674, 2529.45
 pt x 1373.13pt>
 File: Inside_pressure_comparison_3d_and_approx-eps-converted-to.pdf Graphic fil
 e (type pdf)
 <use Inside_pressure_comparison_3d_and_approx-eps-converted-to.pdf>
 Package pdftex.def Info: Inside_pressure_comparison_3d_and_approx-eps-converted
--to.pdf  used on input line 714.
+-to.pdf  used on input line 715.
 (pdftex.def)             Requested size: 310.76122pt x 168.68655pt.
 Package epstopdf Info: Source file: <Inside_pressure_comparison_3d_and_axi.eps>
 
@@ -774,24 +778,25 @@ converted-to.pdf>
 (epstopdf)                    size: 41852 bytes
 (epstopdf)             Command: <repstopdf --outfile=Inside_pressure_comparison
 _3d_and_axi-eps-converted-to.pdf Inside_pressure_comparison_3d_and_axi.eps>
-(epstopdf)             \includegraphics on input line 720.
+(epstopdf)             \includegraphics on input line 721.
 Package epstopdf Info: Output file is already uptodate.
-<Inside_pressure_comparison_3d_and_axi-eps-converted-to.pdf, id=679, 2529.45pt 
+<Inside_pressure_comparison_3d_and_axi-eps-converted-to.pdf, id=677, 2529.45pt 
 x 1373.13pt>
 File: Inside_pressure_comparison_3d_and_axi-eps-converted-to.pdf Graphic file (
 type pdf)
 <use Inside_pressure_comparison_3d_and_axi-eps-converted-to.pdf>
 Package pdftex.def Info: Inside_pressure_comparison_3d_and_axi-eps-converted-to
-.pdf  used on input line 720.
+.pdf  used on input line 721.
 (pdftex.def)             Requested size: 310.76122pt x 168.68655pt.
 
-
-[34 <./Inside_pressure_comparison_3d_and_approx-eps-converted-to.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3815) has occurred while \output is active []
 
 
 
-[35 <./Inside_pressure_comparison_3d_and_axi-eps-converted-to.pdf>]
+[34]
+
+[35 <./Inside_pressure_comparison_3d_and_approx-eps-converted-to.pdf> <./Inside
+_pressure_comparison_3d_and_axi-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Flow_noise_comparison_3D_vs_Knight_Jineesh
 .eps>
 (epstopdf)                    date: 2024-12-06 10:47:42
@@ -803,7 +808,7 @@ Package epstopdf Info: Source file: <Flow_noise_comparison_3D_vs_Knight_Jineesh
 (epstopdf)             Command: <repstopdf --outfile=Flow_noise_comparison_3D_v
 s_Knight_Jineesh-eps-converted-to.pdf Flow_noise_comparison_3D_vs_Knight_Jinees
 h.eps>
-(epstopdf)             \includegraphics on input line 740.
+(epstopdf)             \includegraphics on input line 741.
 Package epstopdf Info: Output file is already uptodate.
 <Flow_noise_comparison_3D_vs_Knight_Jineesh-eps-converted-to.pdf, id=723, 2529.
 45pt x 1373.13pt>
@@ -811,11 +816,8 @@ File: Flow_noise_comparison_3D_vs_Knight_Jineesh-eps-converted-to.pdf Graphic f
 ile (type pdf)
 <use Flow_noise_comparison_3D_vs_Knight_Jineesh-eps-converted-to.pdf>
 Package pdftex.def Info: Flow_noise_comparison_3D_vs_Knight_Jineesh-eps-convert
-ed-to.pdf  used on input line 740.
+ed-to.pdf  used on input line 741.
 (pdftex.def)             Requested size: 310.76122pt x 168.68655pt.
-
-Underfull \vbox (badness 7133) has occurred while \output is active []
-
 
 
 [36 <./Flow_noise_comparison_3D_vs_Knight_Jineesh-eps-converted-to.pdf>]
@@ -830,7 +832,7 @@ eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Comparison_of_flow_noise_3
 D_different_dia-eps-converted-to.pdf Comparison_of_flow_noise_3D_different_dia.
 eps>
-(epstopdf)             \includegraphics on input line 755.
+(epstopdf)             \includegraphics on input line 756.
 Package epstopdf Info: Output file is already uptodate.
 <Comparison_of_flow_noise_3D_different_dia-eps-converted-to.pdf, id=752, 2529.4
 5pt x 1373.13pt>
@@ -838,7 +840,7 @@ File: Comparison_of_flow_noise_3D_different_dia-eps-converted-to.pdf Graphic fi
 le (type pdf)
 <use Comparison_of_flow_noise_3D_different_dia-eps-converted-to.pdf>
 Package pdftex.def Info: Comparison_of_flow_noise_3D_different_dia-eps-converte
-d-to.pdf  used on input line 755.
+d-to.pdf  used on input line 756.
 (pdftex.def)             Requested size: 310.76122pt x 168.68655pt.
 Package epstopdf Info: Source file: <Comparison_of_flow_noise_3D_Different_spee
 d.eps>
@@ -851,7 +853,7 @@ d-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Comparison_of_flow_noise_3
 D_Different_speed-eps-converted-to.pdf Comparison_of_flow_noise_3D_Different_sp
 eed.eps>
-(epstopdf)             \includegraphics on input line 761.
+(epstopdf)             \includegraphics on input line 762.
 Package epstopdf Info: Output file is already uptodate.
 <Comparison_of_flow_noise_3D_Different_speed-eps-converted-to.pdf, id=753, 2529
 .45pt x 1373.13pt>
@@ -859,24 +861,29 @@ File: Comparison_of_flow_noise_3D_Different_speed-eps-converted-to.pdf Graphic
 file (type pdf)
 <use Comparison_of_flow_noise_3D_Different_speed-eps-converted-to.pdf>
 Package pdftex.def Info: Comparison_of_flow_noise_3D_Different_speed-eps-conver
-ted-to.pdf  used on input line 761.
+ted-to.pdf  used on input line 762.
 (pdftex.def)             Requested size: 310.76122pt x 168.68655pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 
 [37 <./Comparison_of_flow_noise_3D_different_dia-eps-converted-to.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2617) has occurred while \output is active []
 
 
 
 [38 <./Comparison_of_flow_noise_3D_Different_speed-eps-converted-to.pdf>]
 (./asme2ejs.bbl
-Underfull \vbox (badness 3460) has occurred while \output is active []
+
+[39]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[39])
+[40])
 
-[40] (./asme2ejs.lof
+[41] (./asme2ejs.lof
 Overfull \hbox (21.70877pt too wide) in paragraph at lines 8--8
  [][] [][][]\OT1/phv/m/n/10.95 The ex-ter-nal tur-bu-lent pres-sure spec-trum l
 evel com-puted us-ing the hy-brid model (Eq. ([][]18[][])).[][] [][]  
@@ -888,13 +895,13 @@ evel com-puted us-ing the hy-brid model (Eq. ([][]18[][])).[][] [][]
 
 
 
-[41] (./asme2ejs.lot)
+[42] (./asme2ejs.lot)
 \tf@lot=\write5
 \openout5 = `asme2ejs.lot'.
 
 
 
-[42] (./asme2ejs.aux)
+[43] (./asme2ejs.aux)
  ***********
 LaTeX2e <2024-06-01>
 L3 programming layer <2024-05-27>
@@ -903,8 +910,8 @@ Package rerunfilecheck Info: File `asme2ejs.out' has not changed.
 (rerunfilecheck)             Checksum: 2102FC8E4F32DF93146274C63F49B603;6976.
  ) 
 Here is how much of TeX's memory you used:
- 11671 strings out of 473600
- 182366 string characters out of 5732738
+ 11672 strings out of 473600
+ 182373 string characters out of 5732738
  1947894 words of memory out of 5000000
  34177 multiletter control sequences out of 15000+600000
  583217 words of font info for 81 fonts, out of 8000000 for 9000
@@ -926,10 +933,10 @@ e1/urw/helvetic/uhvb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/helvetic
 :/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><d:/texlive/2024/texm
 f-dist/fonts/type1/urw/times/utmr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1
 /urw/times/utmri8a.pfb>
-Output written on asme2ejs.pdf (42 pages, 594319 bytes).
+Output written on asme2ejs.pdf (43 pages, 592437 bytes).
 PDF statistics:
- 960 PDF objects out of 1000 (max. 8388607)
- 841 compressed objects within 9 object streams
- 211 named destinations out of 1000 (max. 500000)
+ 965 PDF objects out of 1000 (max. 8388607)
+ 845 compressed objects within 9 object streams
+ 212 named destinations out of 1000 (max. 500000)
  274 words of extra memory for PDF output out of 10000 (max. 10000000)
 

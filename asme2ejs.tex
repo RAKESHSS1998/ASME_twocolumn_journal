@@ -101,6 +101,8 @@ Email: akkoorath@iitpkd.ac.in
 
 \maketitle    
 \doublespacing
+\linenumbers
+\renewcommand{\linenumberfont}{\normalfont\bfseries\color{red}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
 {\it 
@@ -117,8 +119,7 @@ Towed sonar arrays house a series of pressure sensors inside a fluid-filled elas
 %The primary text heading is  boldface and flushed left with the left margin.  %The spacing between the  text and the heading is two line spaces.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\linenumbers
-\renewcommand{\linenumberfont}{\normalfont\bfseries\color{red}}
+
 \section*{Introduction}
 
 Towed sonar arrays contain a series of pressure sensors enclosed within a fluid-filled elastic tube. As the sonar array is towed through the water, a thick layer of turbulent flow is generated over the exterior surface of the tube.~The pressure fluctuations in this turbulent boundary layer (TBL), along with other ambient sea pressure variations, excite the elastic tube and subsequently produce acoustic pressure disturbances within the interior fluid. The hydrophones placed in the interior fluid picks these acoustic signals. The signals associated with the turbulent pressure fluctuations are called flow noise. Currently, the flow noise is measured either by towing the sonar array in open water using a dinghy or by allowing the hydrophone to free fall in water \cite{Sarath2010}. In the first case, noise from the boat and vibrations of the towline connections pollute the measured acoustic signals \cite{Unni2011}; whereas in the second case, the useful measurements can be made only at the terminal velocity of the hydrophone. This work aims at developing a fully-coupled vibroacoustic model for predicting the flow noise in towed sonar arrays which is useful over wide range of towing speeds and tube diameters.
@@ -648,7 +649,7 @@ The developed 3D-VA model of the fluid-filled elastic tube is initially tested w
 
 \begin{figure}[ht]
     \centerline{
-    \includegraphics[width=4.5in]{polarplot_sin_theta.eps}}
+    \includegraphics[width=4.9in]{polarplot_sin_theta.eps}}
     \caption{(a):~Azimuthal variation in the exterior pressure field $\Hat{p}_0(\theta,k_z) =\sin(\theta)$. (b), (c) and (d):~Azimuthal variation in the interior pressure field ($r=a$) at 10~Hz, 100~Hz and 1000~Hz, respectively, for $\Hat{p}_0(\theta,k_z) =\sin(\theta)$.}
     \label{polar plot sin theta}
 \end{figure}
@@ -658,7 +659,7 @@ confirms that the 3D-VA model accurately captures the azimuthal variation (restr
 
 \begin{figure}[ht]
     \centerline{
-    \includegraphics[width=4.5in]{polarplot_cos_theta.eps}}
+    \includegraphics[width=4.9in]{polarplot_cos_theta.eps}}
     \caption{(a):~Azimuthal variation in the exterior pressure field $\Hat{p}_0(\theta,k_z) =\cos(\theta)$. (b), (c) and (d):~Azimuthal variation in the interior pressure field ($r=a$) at 10~Hz, 100~Hz and 1000~Hz, respectively, for $\Hat{p}_0(\theta,k_z) =\cos(\theta)$.}
     \label{polar plot cos theta}
 \end{figure}
